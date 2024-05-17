@@ -1,3 +1,5 @@
+ 
+## == Reflection 1 Minikube==
  1. Compare the application logs before and after you exposed it as a Service.
  Try to open the app several times while the proxy into the Service is running.
  What do you see in the logs? Does the number of logs increase each time you open the app?
@@ -20,3 +22,4 @@ The kubectl get command without any options lists the resources (pods, services,
 The -n option stands for "namespace." In Kubernetes, namespaces are used to organize and separate resources within a cluster. When you use kubectl get -n kube-system, it specifically targets the kube-system namespace, which contains system-critical pods and services managed by Kubernetes itself (e.g., CoreDNS, kube-proxy).
 
 + The reason the output does not list the pods/services you explicitly created when using the -n kube-system option is that the resources are likely in a different namespace (probably the default namespace). The -n option restricts the scope of the kubectl get command to the specified namespace, so it won't show resources in other namespaces.
+
